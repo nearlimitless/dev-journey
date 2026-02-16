@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <div id="app"></div>
+
+        <!-- //Scripts from React Library -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <!--    This block of code finds the element that we've assign the "app" ID to, which in this case, the div.
+                    const app = document.getElementById('app'); 
+
+                The 'props' inside the parameter() of the function Header stores the variables/value from the parent component, 
+                which in this case the HomePage component passes the value of the variable title to the props parameter to change
+                the value depending on what the parent component passes to the child component. This is also called "Object Destructuring"
+
+                In short, function HomePage pass the title = "React" to fuction Header and stores it inside (props) ready to be used.
+                Then, depending on what is passed, you can get specific variables that you want to use, in this case, props.title
+
+                This block of code creates a root inside the div with the "app" ID.
+                    const root = ReactDOM.createRoot(app);
+
+                This block of code renders the react element into the root
+                    root.render(<HomePage />);
+                
+
+        -->
+        <script type="text/jsx">
+            const app = document.getElementById('app');
+
+            function Header(props) {
+                return <h1> {props.title} </h1>;
+            }
+
+            function HomePage() {
+                return (
+                    <div>
+                        <Header title="React" />
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(app);
+            root.render(<HomePage />);
+        </script>
+    </body>
+</html>
