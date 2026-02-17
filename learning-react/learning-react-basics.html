@@ -13,8 +13,14 @@
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         
-        <!--    This block of code finds the element that we've assign the "app" ID to, which in this case, the div.
+        <!--    This line of code finds the element that we've assign the "app" ID to, which in this case, the div.
                     const app = document.getElementById('app'); 
+                This line of code creates a root inside the div with the "app" ID.
+                    const root = ReactDOM.createRoot(app);
+                This line of code renders the react element into the root
+                    root.render(<HomePage />);
+
+                Chapter 6: Displaying Data with props
 
                 The 'props' inside the parameter() of the function Header stores the variables/value from the parent component, 
                 which in this case the HomePage component passes the value of the variable title to the props parameter to change
@@ -23,12 +29,14 @@
                 In short, function HomePage pass the title = "React" to fuction Header and stores it inside (props) ready to be used.
                 Then, depending on what is passed, you can get specific variables that you want to use, in this case, props.title which is an object property with dot notation.
 
-                This block of code creates a root inside the div with the "app" ID.
-                    const root = ReactDOM.createRoot(app);
+                The Concepts we've used is Displaying Data with props using:
+                1. Object Property with dot notation
+                2. Template Literal
+                3. Return value of a function
+                4. Ternary Operators
 
-                This block of code renders the react element into the root
-                    root.render(<HomePage />);
-                
+                Chapter 7:Adding interactivity with state
+
 
         -->
         <script type="text/jsx">
@@ -43,7 +51,7 @@
             }
 
             function Header3(props) {
-                return <h1>{createTitle(props.title)}</h1>
+                return <h1>{createTitle(props.title)}</h1>;
             }
 
             function Header4(props) {
@@ -61,7 +69,17 @@
 
 
             function HomePage() {
-                const names = ['Aaron', 'Near', 'Limitless']
+                const [likes, setLikes] = React.useState(0);
+
+                const users = [
+                {id: 1, name: "Aaron"}, 
+                {id: 2, name: "Near"},
+                {id: 3, name: "Limitless"}
+                ];
+
+                function handleClick() {
+                    setLikes(likes + 1);
+                }
 
                 return (
                     <div>
@@ -70,11 +88,11 @@
                         <Header2 title="Dev Journey: " />
                         <Header title="React" />
                         <ul>
-                            {names.map((name) => (
-                                <li>{name}</li>
+                            {users.map((user) => (
+                                <li key={user.id}>{user.name}</li>
                             ))}
                         </ul>
-
+                        <button onClick={handleClick}>Like [{likes}]</button>
                     </div>
                 );
             }
