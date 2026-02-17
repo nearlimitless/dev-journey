@@ -21,7 +21,7 @@
                 the value depending on what the parent component passes to the child component. This is also called "Object Destructuring"
 
                 In short, function HomePage pass the title = "React" to fuction Header and stores it inside (props) ready to be used.
-                Then, depending on what is passed, you can get specific variables that you want to use, in this case, props.title
+                Then, depending on what is passed, you can get specific variables that you want to use, in this case, props.title which is an object property with dot notation.
 
                 This block of code creates a root inside the div with the "app" ID.
                     const root = ReactDOM.createRoot(app);
@@ -34,14 +34,47 @@
         <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function Header(props) {
+            function Header({title}) {
+                return <h1> {`Cool ${title}`} </h1>;
+            }
+
+            function Header2(props) {
                 return <h1> {props.title} </h1>;
             }
 
+            function Header3(props) {
+                return <h1>{createTitle(props.title)}</h1>
+            }
+
+            function Header4(props) {
+                return <h1>{props.title ? props.title : "Default Title"}</h1>;
+            }
+
+            function createTitle(title) {
+                if (title) {
+                    return title;
+                }
+                else {
+                    return "Default Title";
+                }
+            }
+
+
             function HomePage() {
+                const names = ['Aaron', 'Near', 'Limitless']
+
                 return (
                     <div>
+                        <Header4 title="Hey" />
+                        <Header3 title="Welcome to my Domain!" />
+                        <Header2 title="Dev Journey: " />
                         <Header title="React" />
+                        <ul>
+                            {names.map((name) => (
+                                <li>{name}</li>
+                            ))}
+                        </ul>
+
                     </div>
                 );
             }
