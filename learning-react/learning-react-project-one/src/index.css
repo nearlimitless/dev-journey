@@ -18,12 +18,19 @@
   padding:180px;
 }
 
+.reset-link-style {
+  color:white;
+  font-style: normal;
+  text-decoration: none;
+}
+
 .box-container {
-  border: 2px solid #333;   
+  border: 3px solid #333;   
   border-radius: 12px;             
-  max-width: 750px;   
+  max-width: 780px;   
   height: 550px;   
-  margin: 20px auto;       
+  margin: 20px auto;  
+  padding-right:1px;     
 }
 .box-header {
 
@@ -33,9 +40,45 @@
   height: 45px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+
 }
+
+.about-me-logo {
+  height: 55px;
+  width: 55px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.links-container ul{
+  list-style:none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  height: 45px;
+  padding: 50px;
+
+}
+
+.links-container {
+  margin-top:22%;
+}
+
+
+
 .small-container {
-  padding: 30px;
+  padding: 40px;
+
+}
+
+.link-container {
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid white;
 }
 
 .header {
@@ -54,3 +97,17 @@
 }
 
 
+/* Draggable */
+
+
+
+.dragdiv {
+    padding: 8rem;
+    color: blueviolet;
+    cursor: grabbing;
+    font-size: medium;
+    font-weight: 600;
+    font-family:
+        'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
