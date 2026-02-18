@@ -1,27 +1,25 @@
 import MyButton from './MyButton.jsx';
 import Header from './Header.jsx';
 import MyLinks from './MyLinks.jsx';
+import Draggable from 'react-draggable';
 
 
-
-function AboutPage() {
+function Windows() {
     return (
         <>
-            <div className="box-container">
+        <Draggable>
+            <div className="window-container">
                 <div className="box-header">
                         
                 </div>
                 <div className="small-container">
                     <h1>{'<Near />'}</h1>
                     <p>an illustrator, animator, and developer</p>
-                </div>  
-                <div>
-                    <MyLinks />
-                </div>
-                    
+                </div>                     
             </div>
+        </Draggable>
         </>
     );
 }
 
-export default AboutPage;
+export default Windows;

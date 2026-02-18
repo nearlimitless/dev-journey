@@ -3,6 +3,7 @@ import icon_contact from '../assets/images/icon_contact.webp';
 import icon_faq from '../assets/images/icon_faq.webp';
 import icon_links from '../assets/images/icon_links.webp';
 import icon_work from '../assets/images/icon_work.webp';
+import Windows from './windows/AboutWindow.jsx';
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
@@ -11,15 +12,17 @@ import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
 function MyLinks() {
     const [open, setOpen] = useState(false);
-   
+
     const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    bgcolor: "background.paper",
-    p: 4,
-  };
+        position: 'absolute',
+        bottom: '5%',
+        left: '5%',
+        transform: 'none',
+        p: 4,
+        width: 800,
+        height: 700,
+    };
+
 
     return (
         <>
@@ -38,8 +41,7 @@ function MyLinks() {
                                 }}
                               >
                                 <Box sx={style}>
-                                  <Typography variant="h6">MUI Modal</Typography>
-                                  <Typography>This modal has no dark background.</Typography>
+                                    <Windows />
                                 </Box>
                               </Modal>
                     </li>

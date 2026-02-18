@@ -9,12 +9,12 @@ export default function MyApp() {
 
   return (
     <>
-      <Draggable>
+
         <div>
           <Header />
           <AboutPage />
         </div>
-      </Draggable>
+
     </>
 
   );
