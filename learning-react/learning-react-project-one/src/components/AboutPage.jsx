@@ -13,13 +13,11 @@ function AboutPage() {
                 <div className="small-container">
                     <h1>{'<Near />'}</h1>
                     <p>an illustrator, animator, and developer</p>
-                    <div>
                 </div>  
-                    <div>
-                        <MyLinks />
-                    </div>
-                    
+                <div>
+                    <MyLinks />
                 </div>
+                    
             </div>
         </>
     );
