@@ -1,20 +1,21 @@
-
+import React, { useState } from "react";
 import AboutPage from './components/AboutPage.jsx';
 import Header from './components/Header.jsx';
-import MyLinks from './components/MyLinks.jsx';
 import Draggable from 'react-draggable';
+import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
 export default function MyApp() {
+
+
   return (
-    <Draggable>
-    <div>          
-        <div className="header">
+    <>
+      <Draggable>
+        <div>
           <Header />
+          <AboutPage />
         </div>
-        <div className="body">
-          <AboutPage />      
-        </div>
-    </div>
-    </Draggable>
+      </Draggable>
+    </>
+
   );
 }

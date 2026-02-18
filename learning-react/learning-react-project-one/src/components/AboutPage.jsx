@@ -1,6 +1,8 @@
 import MyButton from './MyButton.jsx';
 import Header from './Header.jsx';
 import MyLinks from './MyLinks.jsx';
+import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
+
 
 
 function AboutPage() {
