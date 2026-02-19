@@ -21,7 +21,18 @@ function AboutWindow() {
                                 <p>an illustrator, animator, and developer</p>
                             </div>
                     </div>
-                </div>                     
+                </div>         
+                <div className="modal-body">
+                    <h1>tesaaaaaaaaaaaaaaaaaaaaaaat</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+                    <h1>test</h1>
+
+                </div>            
             </div>
         </Draggable>
         </>
