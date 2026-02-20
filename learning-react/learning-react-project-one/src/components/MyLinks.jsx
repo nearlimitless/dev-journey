@@ -3,7 +3,7 @@ import icon_contact from '../assets/images/icon_contact.webp';
 import icon_faq from '../assets/images/icon_faq.webp';
 import icon_links from '../assets/images/icon_links.webp';
 import icon_work from '../assets/images/icon_work.webp';
-import Windows from './windows/AboutWindow.jsx';
+import AboutWindow from './windows/AboutWindow.jsx';
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
@@ -41,7 +41,7 @@ function MyLinks() {
                                 }}
                               >
                                 <Box sx={style}>
-                                    <Windows />
+                                    <AboutWindow />
                                 </Box>
                               </Modal>
                     </li>

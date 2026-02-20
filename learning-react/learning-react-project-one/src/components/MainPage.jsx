@@ -1,15 +1,14 @@
-import MyButton from './MyButton.jsx';
 import Header from './Header.jsx';
 import MyLinks from './MyLinks.jsx';
 
 
 
-function AboutPage() {
+function MainPage() {
     return (
         <>
             <div className="box-container">
                 <div className="box-header">
-                        
+                    
                 </div>
                 <div className="small-container">
                     <h1>{'<Near />'}</h1>
@@ -24,4 +23,4 @@ function AboutPage() {
     );
 }
 
-export default AboutPage;
+export default MainPage;

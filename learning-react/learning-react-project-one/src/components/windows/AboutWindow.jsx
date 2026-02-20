@@ -1,4 +1,3 @@
-import MyButton from '../MyButton.jsx';
 import Header from '../Header.jsx';
 import MyLinks from '../MyLinks.jsx';
 import Draggable from 'react-draggable';
@@ -23,15 +22,13 @@ function AboutWindow() {
                     </div>
                 </div>         
                 <div className="modal-body">
-                    <h1>tesaaaaaaaaaaaaaaaaaaaaaaat</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-                    <h1>test</h1>
-
+                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                    <h3>Education</h3>
+                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                    <h3>Other Interests</h3>
+                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                    <h3>Language Proficiency</h3>
+                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
                 </div>            
             </div>
         </Draggable>
