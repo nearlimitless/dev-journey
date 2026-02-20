@@ -4,6 +4,7 @@ import icon_faq from '../assets/images/icon_faq.webp';
 import icon_links from '../assets/images/icon_links.webp';
 import icon_work from '../assets/images/icon_work.webp';
 import AboutWindow from './windows/AboutWindow.jsx';
+import WorkWindow from './windows/WorkWindow.jsx';
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
@@ -12,6 +13,7 @@ import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
 function MyLinks() {
     const [open, setOpen] = useState(false);
+    const [open1, setOpen1] = useState(false);
 
     const style = {
         position: 'absolute',
@@ -22,6 +24,18 @@ function MyLinks() {
         width: 800,
         height: 700,
     };
+
+        const style1 = {
+        position: 'absolute',
+        bottom: '5%',
+        left: '5%',
+        transform: 'none',
+        p: 4,
+        width: 800,
+        height: 700,
+    };
+
+
 
 
     return (
@@ -46,8 +60,27 @@ function MyLinks() {
                               </Modal>
                     </li>
                     
-                    <li><a className="reset-link-style" href="#"><img className="about-me-logo" src={icon_links}/>Links</a></li>
-                    <li><a className="reset-link-style" href="#"><img className="about-me-logo" src={icon_work}/>Work</a></li>
+                    <li>
+                        <a className="reset-link-style" href="#"><img className="about-me-logo" src={icon_links}/>
+                            Links
+                        </a>
+                    </li>
+                    <li>
+                        <a className="reset-link-style" href="#" onClick={(e) => { e.preventDefault(); setOpen1(true)}}><img className="about-me-logo" src={icon_work}/>
+                            Work
+                        </a>
+                            <Modal
+                                open={open1}
+                                onClose={() => setOpen1(false)}
+                                BackdropProps={{
+                                  style: { backgroundColor: "transparent" },
+                                }}
+                              >
+                                <Box sx={style1}>
+                                    <WorkWindow />
+                                </Box>
+                            </Modal>
+                    </li>
                     <li><a className="reset-link-style" href="#"><img className="about-me-logo" src={icon_faq}/>FAQ</a></li>
                     <li><a className="reset-link-style" href="#"><img className="about-me-logo" src={icon_contact}/>Contact</a></li>
                 </ul>
