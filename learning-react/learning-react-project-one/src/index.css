@@ -289,8 +289,11 @@ h2 {
 /* Terminal Container */
 
 .terminal-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: end;
   background-color: rgb(37, 37, 37);
-  height: 251px;
+  height: 265px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
