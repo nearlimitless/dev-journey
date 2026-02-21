@@ -171,7 +171,7 @@ h2 {
 }
 
 .links-container {
-  margin-top:15%;
+  margin-top:0%;
 }
 
 
@@ -284,4 +284,17 @@ h2 {
   font-weight:100px;
   font-size:small;
   
+}
+
+/* Terminal Container */
+
+.terminal-container {
+  background-color: rgb(37, 37, 37);
+  height: 251px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.terminal-container p {
+  padding:30px;
 }

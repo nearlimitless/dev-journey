@@ -1,5 +1,6 @@
 import Header from './Header.jsx';
 import MyLinks from './MyLinks.jsx';
+import Terminal from './Terminal.jsx';
 
 
 
@@ -15,6 +16,7 @@ function MainPage() {
                     <p>an illustrator, animator, and developer</p>
                 </div>  
                 <div>
+                    <Terminal />
                     <MyLinks />
                 </div>
                     
