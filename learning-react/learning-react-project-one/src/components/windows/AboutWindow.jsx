@@ -2,15 +2,18 @@ import Header from '../Header.jsx';
 import MyLinks from '../MyLinks.jsx';
 import Draggable from 'react-draggable';
 import avatarimg from '../../assets/images/avatarimg.webp';
+import { useRef } from "react";
+
 
 
 function AboutWindow() {
+    const nodeRef = useRef(null);
     return (
         <>
-        <Draggable>
-            <div className="window-container">
+        <Draggable nodeRef={nodeRef}>
+            <div ref={nodeRef} className="window-container">
                 <div className="box-header">
-                        <h4>about</h4>
+                        <h4>C:\User\about</h4>
                 </div>
                 <div>
                     <div className="avatar-card">

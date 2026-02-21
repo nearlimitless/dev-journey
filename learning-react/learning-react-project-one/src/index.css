@@ -270,9 +270,18 @@ h2 {
 /* WorkWindow.jsx */
 
 .quote-box {
-  background-color: rgb(255, 242, 166);
+  background-color: #333;
+  border-radius: 4px;
   margin-left: 20px;
   margin-right: 30px;
   width: auto;
   min-height: 50px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.quote-box p {
+  font-weight:100px;
+  font-size:small;
+  
 }
