@@ -7,8 +7,8 @@ function MainPage() {
     return (
         <>
             <div className="box-container">
-                <div className="box-header">
-                    
+                <div className="box-header1">
+                        <h4>C:\Users\Terminal</h4>
                 </div>
                 <div className="small-container">
                     <h1>{'<Near />'}</h1>

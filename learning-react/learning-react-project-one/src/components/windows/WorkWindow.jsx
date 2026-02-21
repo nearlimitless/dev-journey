@@ -13,14 +13,21 @@ function WorkWindow() {
                         
                 </div>  
                 <div className="modal-body2">
-                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
-                    <h3>Education</h3>
-                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
-                    <h3>Other Interests</h3>
-                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
-                    <h3>Language Proficiency</h3>
-                    <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
-                    
+                    <div className="quote-box">
+                        <p>Helo</p>
+                    </div>
+                    <div>
+                        <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                        <h3>Education</h3>
+                        <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                        <h3>Other Interests</h3>
+                        <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                        <h3>Language Proficiency</h3>
+                        <p>tesaaaaaaaaaaaaaaaaaaaaaaat</p>
+                    </div>
+                    <div>
+
+                    </div>
                 </div>            
             </div>
         </Draggable>

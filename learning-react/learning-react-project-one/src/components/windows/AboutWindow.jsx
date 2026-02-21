@@ -10,11 +10,11 @@ function AboutWindow() {
         <Draggable>
             <div className="window-container">
                 <div className="box-header">
-                        
+                        <h4>about</h4>
                 </div>
                 <div>
                     <div className="avatar-card">
-                        <img src={avatarimg} className="avatar"></img>
+                        <img className="avatar"></img>
                             <div className="avatar-info">
                                 <h1>{'<Aaron Bacani />'}</h1>
                                 <p>an illustrator, animator, and developer</p>
