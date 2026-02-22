@@ -7,3 +7,26 @@ canvas.height = 576
 
 c.fillStyle = 'white';
 c.fillRect(0, 0, canvas.width, canvas.height)
+
+const image = new Image()
+image.src = './img/palletTown.png'
+
+const playerImage = new Image()
+playerImage.src = './img/playerDown.png'
+
+
+image.onload = () => {
+    c.drawImage(image, -200, -250)
+    c.drawImage(
+        playerImage,
+        0,
+        0,
+        playerImage.width / 4,
+        playerImage.height,
+        
+        canvas.width / 2 - playerImage.width / 4 / 2, 
+        canvas.height / 2 - playerImage.height / 2,
+        playerImage.width / 4,
+        playerImage.height,
+    )
+}
