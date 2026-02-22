@@ -43,7 +43,7 @@ h2 {
   border: 1px solid #ffffff;   
   /* border: 1px solid #ffffff; */
   /* background-color: #242424; */
-  background-color: #161616;
+  background-color: #242424;
   border-radius: 6px;             
   max-width: 780px;   
   height: 550px;   
@@ -292,7 +292,7 @@ h2 {
   display: flex;
   flex-direction:column;
   justify-content: end;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(44, 44, 44);
   height: 265px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
