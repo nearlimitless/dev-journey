@@ -63,18 +63,10 @@ function animate() {
         playerImage.height,
     )
 
-    if (keys.w.pressed) {
-        background.position.y = background.position.y + 3 
-    }
-    if (keys.a.pressed) {
-        background.position.x = background.position.x + 3
-    }
-    if (keys.s.pressed) {
-        background.position.y = background.position.y - 3
-    }
-    if (keys.d.pressed) {
-        background.position.x = background.position.x - 3
-    }
+    if (keys.w.pressed ) background.position.y += 3
+    else if (keys.a.pressed ) background.position.x += 3
+    else if (keys.s.pressed ) background.position.y -= 3
+    else if (keys.d.pressed ) background.position.x -= 3
 }
 animate()
 
