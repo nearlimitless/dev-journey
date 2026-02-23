@@ -301,3 +301,13 @@ h2 {
 .terminal-container p {
   padding:30px;
 }
+
+.terminal-container input {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+}
