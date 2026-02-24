@@ -8,7 +8,7 @@ const [input, setInput] = useState("");
     return (
         <>
             <div className="terminal-container">
-                <p>Terminal (in progress)</p>
+                <p>Terminal in progress</p>
                 <input
                     type="text"
                     value={input}
