@@ -31,6 +31,11 @@
                 ">
                     Reset Cart
                 </button>
+                <button onclick="
+                    {minusQuantity()}
+                ">
+                    -1
+                </button>
             </div>
         </div>
 
@@ -39,30 +44,52 @@
 
 
             function addQuantity () {
-                return (
+                
+                if (quantity >= 0 && quantity < 10) {
                     quantity = quantity + 1,
                     console.log(quantity)
-                );
+                }
+                else {
+                    console.log('Cart Full')
+                }
             }
 
             function add2Quantity () {
-                return (
+                if (quantity >= 0 && quantity < 10) {
                     quantity = quantity + 2,
                     console.log(quantity)
-                );
+                }
+                else {
+                    console.log('Cart Full')
+                }
             }
 
             function add3Quantity () {
-                return (
+                if (quantity >= 0 && quantity < 10) {
                     quantity = quantity + 3,
                     console.log(quantity)
-                );
+                }
+                else {
+                    console.log('Cart Full')
+                }
             }
 
             function resetQuantity () {
                 return (
-                    quantity = quantity - quantity
+                    quantity = 0,
+                    console.log(`Cart has been reset to ${quantity}`)
+                    
                 );
+            }
+
+            function minusQuantity() {
+                if (quantity > 0) {
+                    quantity -= 1
+                    console.log(`-1 to cart. Current Quantity: ${quantity}`)
+                }
+                else if (quantity === 0) {
+                    console.log(`Cart is ${quantity}. Cannot -1 anymore.`)
+                }
             }
 
 
