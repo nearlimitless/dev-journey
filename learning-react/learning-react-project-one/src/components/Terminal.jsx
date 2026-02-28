@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 
-function Terminal ({ setShowLinks }) {
+function Terminal ({ setActiveModal, setShowLinks, setShowChatbot }) {
     const [input, setInput] = useState("");
     const [output, setOutput] = useState("");
 
@@ -24,17 +24,30 @@ function Terminal ({ setShowLinks }) {
                             case "help":
                                 newOutput += "Welcome, and thank you for visiting my Personal Portfolio Website\n"+ 
                                 "Here's some set of commands that you can use in the terminal\n" + 
-                                "  - show-buttons \n" + 
-                                "  - hide-buttons \n";
+                                "  - show buttons \n" + 
+                                "  - hide buttons \n" +
+                                "  - show chatbot \n " +
+                                "  - hide chatbot \n ";
                                 break;
 
-                            case "pwd":
-                                newOutput += "";
+                            case "hide buttons":
+                                setShowLinks(false)
+                                newOutput += "Buttons hidden.";
                                 break;
 
-                            case "show-buttons":
+                            case "show buttons":
                                 setShowLinks(true);
                                 newOutput += "Buttons revealed.";
+                                break;
+
+                            case "show chatbot":
+                                setShowChatbot(true);
+                                newOutput += "Chatbot revealed."
+                                break;
+
+                            case "hide chatbot":
+                                setShowChatbot(false);
+                                newOutput += "Chatbot hidden."
                                 break;
 
                             default:

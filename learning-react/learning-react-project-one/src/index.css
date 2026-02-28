@@ -50,7 +50,7 @@ h2 {
   margin: 20px auto;  
   padding-right:1px;    
   margin-top:190px; 
-  
+  width: 800px;
 
 }
 
@@ -327,4 +327,28 @@ h2 {
 .outputContainer {
   margin-left: 30px;
   margin-bottom: 20px;
+}
+
+/* Button Container */
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  
+}
+
+/* Chatbot Container*/
+
+.chatbot-container {
+  margin-left: 50px;
+  margin-top: 90px;
+  position:absolute;
+}
+
+/* Page Container*/
+.page-container {
+ display: flex;
+ width: 0 auto;
+
 }

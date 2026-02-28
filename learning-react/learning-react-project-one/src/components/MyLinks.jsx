@@ -8,14 +8,15 @@ import WorkWindow from './windows/WorkWindow.jsx';
 import FaqWindow from './windows/FaqWindow.jsx'
 import LinksWindow from './windows/LinksWindow.jsx'
 import ContactWindow from './windows/ContactWindow.jsx'
+import Chatbot from './Chatbot.jsx';
 import React, { useState } from "react";
 import { Modal, Box, Typography, Button, Backdrop } from "@mui/material";
 
 
 
 
-function MyLinks() {
-  const [activeModal, setActiveModal] = useState(null);
+function MyLinks({activeModal, setActiveModal}) {
+
 
   const style = {
     position: 'absolute',
