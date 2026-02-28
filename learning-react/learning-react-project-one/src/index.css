@@ -63,7 +63,7 @@ h2 {
   margin: 20px auto;  
   padding-right:1px;    
   margin-top:100px; 
-  overflow:'hidden';
+  overflow:'hidden'; /*hides excess*/
   display: flex;
   flex-direction:column;
   
@@ -167,6 +167,7 @@ h2 {
   gap: 50px;
   height: 45px;
   padding: 50px;
+  
 
 }
 
@@ -178,6 +179,11 @@ h2 {
 
 .small-container {
   padding: 40px;
+  background-color: rgb(44, 44, 44);
+  position: relative;
+  flex-shrink: 0;
+  margin-top: -20px;
+  height: 153px;
 
 }
 
@@ -296,10 +302,16 @@ h2 {
   height: 265px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  white-space: pre-line;
+  overflow-y: auto;   /* enables vertical scroll */
+  flex: 1;            /* takes remaining space */
+  
 }
 
 .terminal-container p {
   padding:30px;
+  margin-bottom: -35px;
+  color:rgba(255, 255, 255, 0.87);
 }
 
 .terminal-container input {
@@ -310,4 +322,9 @@ h2 {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0;
+}
+
+.outputContainer {
+  margin-left: 30px;
+  margin-bottom: 20px;
 }

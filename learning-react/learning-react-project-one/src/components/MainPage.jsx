@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from './Header.jsx';
 import MyLinks from './MyLinks.jsx';
 import Terminal from './Terminal.jsx';
@@ -5,6 +6,7 @@ import Terminal from './Terminal.jsx';
 
 
 function MainPage() {
+    const [showLinks, setShowLinks] = useState(false);
     return (
         <>
             <div className="box-container">
@@ -16,8 +18,10 @@ function MainPage() {
                     <p>an illustrator, animator, and developer</p>
                 </div>  
                 <div>
-                    <Terminal />
-                    <MyLinks />
+                    <Terminal setShowLinks={setShowLinks} />
+                    
+                    {/* Only render when true */}
+                    {showLinks && <MyLinks />}
                 </div>
                     
             </div>
