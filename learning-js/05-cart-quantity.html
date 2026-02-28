@@ -13,16 +13,16 @@
                     Show Quantity
                 </button>
                 <button onclick="
-                 {addQuantity()}
+                 {addQuantity(1)}
                 ">
                     Add to Cart
                 <button onclick="
-                    {add2Quantity()}
+                    {addQuantity(2)}
                 ">
                     +2
                 </button>
                 <button onclick="
-                    {add3Quantity()}
+                    {addQuantity(3)}
                 ">
                     +3
                 </button>
@@ -41,32 +41,13 @@
 
         <script>
             let quantity = 0;
+            
 
 
-            function addQuantity () {
+            function addQuantity (value) {
                 
                 if (quantity >= 0 && quantity < 10) {
-                    quantity = quantity + 1,
-                    console.log(quantity)
-                }
-                else {
-                    console.log('Cart Full')
-                }
-            }
-
-            function add2Quantity () {
-                if (quantity >= 0 && quantity < 10) {
-                    quantity = quantity + 2,
-                    console.log(quantity)
-                }
-                else {
-                    console.log('Cart Full')
-                }
-            }
-
-            function add3Quantity () {
-                if (quantity >= 0 && quantity < 10) {
-                    quantity = quantity + 3,
+                    quantity = Math.min(quantity + value, 10)
                     console.log(quantity)
                 }
                 else {
